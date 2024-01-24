@@ -14,7 +14,8 @@
     --text-color : #fff;
 
     --h1-font : 5.6rem;
-    --h2-font : 3.7rem;
+    /*--h2-font : 3.7rem;*/
+    --h2-font :30px;
     --p-font : 1rem;
 }
 
@@ -344,7 +345,7 @@ button:hover svg {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: -188px;
+  margin-top: -300px;
   margin-bottom: 50px; /* Tambahkan ini */
 }
 
@@ -355,12 +356,12 @@ button:hover svg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between; /* Tambahkan ini */
-  gap: 3rem;
-  margin-bottom: 20px;
+  gap: 1rem;
+  margin-bottom: 1px;
 }
 
 .work-text {
-  font-size: var(--h2-font);
+  font-size: 35px;
   color: #ffedd3;
 }
 
@@ -371,7 +372,7 @@ button:hover svg {
 
 .work-title {
   margin-top: 3rem;
-  font-size: var(--h2-font);
+  font-size: 40px;
   color: #ffedd3;
   text-align: center;
 }
@@ -452,3 +453,151 @@ button:hover svg {
   transform: translateY(-3px) scale(1.02);
   cursor: pointer;
 }
+
+/*Contact*/
+
+.contact {
+  padding: 2px 5% 1%;
+  margin: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: -5rem;
+  margin-bottom: 50px; /* Tambahkan ini */
+
+}
+
+.contact-main {
+  padding: 30px 1px 20px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* Tambahkan ini */
+  gap: 3rem;
+  margin-bottom: 20px;
+  margin-top: 49px;
+}
+
+.contact-text {
+  font-size: 27px;
+  color: #ffedd3;
+}
+
+.c-btn a {
+  color: #ffedd3;
+  margin-left: 200px;
+  transition: all .7s;
+}
+
+
+.c-btn a:hover {
+  transform: translate(-5px);
+  color: #ffc506;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.3rem;
+  flex: 1; /* Memaksimalkan ruang dari elemen ini */
+  margin-right: 2rem; /* Menambahkan jarak antara elemen ini dan elemen map */
+}
+
+.contact-form form {
+  position: relative;
+  width: 600px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  background: #ffedd3;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+form input::placeholder, 
+form textarea::placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: none;
+}
+
+/*form .send-btn {
+  display: inline-block;
+  padding: 11px 25px;
+  background: #ffedd3;
+  color: black;
+  border: 2px solid #ffedd3;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+*/
+form .send-btn {
+  background: #ffc506;
+  font-weight: 600;
+  color: var(--text-color);
+}
+/* Tombol saat di-hover */
+form .send-btn:hover {
+  background: #ffc506; /* Ganti warna latar belakang tombol saat di-hover */
+  color: black; /* Ganti warna teks tombol saat di-hover */
+  border: 2px solid #ffedd3; /* Ganti warna garis tombol saat di-hover */
+  transition: all 0.3s ease-in-out; /* Durasi animasi saat di-hover */
+}
+
+/* Efek animasi sebelum tombol di-hover */
+form .send-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 8px;
+  background: #ffc506; /* Warna animasi sebelum tombol di-hover */
+  transition: width 0.3s ease-in-out;
+}
+
+form .send-btn:hover::before {
+  width: 100%;
+}
+
+/* Efek ketukan saat tombol ditekan */
+form .send-btn:active {
+  transform: translateY(2px);
+}
+
+/* Map */
+
+.map-card {
+  display: flex;
+  flex: 1;
+  text-align: right;
+  padding-top: -1px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 43%;
+  padding: 2rem;
+  border-radius: 50px;
+}
+
+
+.map-container iframe {
+  display: flex;
+  flex: 1;
+  text-align: right;
+  margin-top: -4%;
+  border-radius: 10px;
+}
+
+/* Responsif layar */
