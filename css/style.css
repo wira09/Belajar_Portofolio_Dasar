@@ -37,6 +37,11 @@ header {
     transition: all .7s;
 }
 
+header.sticky {
+  background: #25262d;
+  padding: 2px 2%;
+}
+
 .logo {
     padding: 2%;
     display: flex;
@@ -109,7 +114,7 @@ header {
 }
 
 section {
-    padding: 40px 19% 30px;
+    padding: 40px 19% 30px;    
 }
 
 .home {
@@ -164,24 +169,65 @@ section {
     line-height: 1.1;
     font-weight: 800;
 }
-/* Socia Card*/
-  /*Button*/
+
+/* Button Utama*/
+
 button {
-    margin: 5px;
-    padding: 15px 25px;
-    border: unset;
-    border-radius: 15px;
-    color: #f8f9f9; /* Ganti warna teks menjadi biru */
-    z-index: 1;
-    background: #212121;
-    position: relative;
-    font-weight: 1000;
-    font-size: 17px;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    transition: all 250ms;
-    overflow: hidden;
-  }
+  margin: 5px;
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #f8f9f9; /* Ganti warna teks menjadi biru */
+  z-index: 1;
+  background: #212121;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #ffc506;
+  /*background-color: #e8e8e8;*/
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+  transition: all 250ms
+}
+
+/* Socia Card*/
+
+button.btn:hover {
+  color: #212121;
+}
+
+button.btn:hover::before {
+  width: 100%;
+}
+
+button svg:hover {
+  fill: black; /* Ganti warna isi svg saat hover menjadi hitam */
+}
+
+button svg:hover::before {
+  width: 100%;
+}
+
+button:hover svg {
+  fill: #212121; /* Ganti warna isi svg saat button di-hover menjadi hitam */
+}
+
+  /*Button class bagian mail me*/
 
   button a {
     color: #ffedd3;
@@ -190,22 +236,7 @@ button {
   button i {
     color: #ffedd3;
   }
-  
-  button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: #e8e8e8;
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
-    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
-    transition: all 250ms
-  }
-  
+    
   button a:hover {
     color: #212121;
   }
@@ -218,7 +249,6 @@ button {
     color: black; /* Ganti warna teks saat hover menjadi hitam */
   }
   
-  
   button:hover::before {
     width: 100%;
   }
@@ -229,3 +259,196 @@ button {
   button:hover a {
     color: #212121; /* Ganti warna teks saat hover menjadi hitam */
   }
+   
+  /*About*/
+
+  .about {
+    padding: 2% 5% 1%;
+    margin: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 50px; /* Tambahkan ini */
+  }
+  .h-main  {
+    padding: 50px 1px 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* Tambahkan ini */
+    gap: 3rem;
+    margin-bottom: 20px;
+  }
+
+  div p {
+    color: #ffedd3;
+    text-align: justify;
+  }
+
+  .h-btn a{
+    color: #ffedd3;
+    margin-left: 200px;
+    transition: all .7s;
+  }
+
+  .h-btn a:hover {
+    transform: translate(-5px);
+    color: #ffc506;
+  }
+
+  .h-btn i {
+    margin-left: 6px;
+  }
+
+  .h-text {
+    font-size: var(--h2-font);
+    color: #ffedd3;
+    text-align: center;
+  }
+
+  .about-content {
+    display: flex;
+    padding: 0 1% 2rem; /* Tambahkan padding di bawah */
+    margin: 20% auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .box h3 {
+    color: #ffedd3;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .box a {
+    
+    color: #ffc506;
+    font-size: 14px;
+  }
+
+/* Work */
+
+.work {
+  padding: 2px 5% 1%;
+  margin: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: -188px;
+  margin-bottom: 50px; /* Tambahkan ini */
+}
+
+.work-main {
+  padding: 30px 1px 20px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* Tambahkan ini */
+  gap: 3rem;
+  margin-bottom: 20px;
+}
+
+.work-text {
+  font-size: var(--h2-font);
+  color: #ffedd3;
+}
+
+.work p {
+  color: #ffedd3;
+  text-align: justify;
+}
+
+.work-title {
+  margin-top: 3rem;
+  font-size: var(--h2-font);
+  color: #ffedd3;
+  text-align: center;
+}
+
+.w-btn {
+  margin-top: 3rem;
+}
+
+.w-btn a {
+  color: #ffedd3;
+  margin-left: 200px;
+  transition: all .7s;
+}
+
+.w-btn a:hover {
+  transform: translate(-5px);
+  color: #ffc506;
+}
+
+/* Content Work */
+
+.work-content img {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+/* ROW */
+
+.row {
+  background: #25262d;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  transition: all .7s;
+}
+
+.row img {
+  height: auto;
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.4rem;
+}
+
+.main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.row h5 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.row h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.row i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 50%;
+  background: #f8f9f9;
+  color: black;
+}
+
+.row:hover {
+  border: 1px solid #ffedd3;
+  transform: translateY(-3px) scale(1.02);
+  cursor: pointer;
+}
