@@ -1,0 +1,1 @@
+Hai Ayo jangan malas
